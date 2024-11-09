@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/stylesheets/styles.css" />
+        <%- include('partials/nav') %>
+    </head>
+    <body>
+        <div class="container">
+            <h1><%= plant.name %></h1>
+            <form class="new-plant-form" action="/plants/<%= plant._id %>?_method=PUT" method="POST">
+                <p>Lets edit our current plant</p>
+                <label for="image"></label>
+                <input
+                    type="text"
+                    name="image"
+                    id="image"
+                    value="<%= plant.image %>"
+                />
+
+                <label for="name"></label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value="<%= plant.name %>"
+                />
+
+                <label for="description"></label>
+                <input
+                    type="text"
+                    name="description"
+                    id="description"
+                    value="<%= plant.description %>"
+                />
+
+                <div>
+                    <button type="submit">Finished</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

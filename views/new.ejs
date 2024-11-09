@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <%- include('partials/nav') %>
+    </head>
+    <body>
+        <div class="container">
+            <h1>New Plant</h1>
+            <form class="new-plant-form" action="/plants/new" method="POST">
+
+                <p>fill out form to add new plant<p>
+
+                <label for="image"></label>
+                <input type="text" name="image" id="image" placeholder="image"/>
+
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Name" required/>
+
+                <label for="description"></label>
+                <input type="text" name="description" id="description" placeholder="description" required/>
+
+                <div>
+                    <button type="submit">Add plant</button>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
